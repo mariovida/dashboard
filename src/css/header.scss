@@ -1,0 +1,139 @@
+nav {
+    width: 100vw;
+    height: 60px;
+    background-color: $c-2;
+    margin-bottom: 40px;
+
+    .wrapper {
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 16px;
+
+        a, button {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            font-size: $fs-16;
+            font-weight: bold;
+            text-align: left;
+            color: $c-1;
+            background-color: transparent;
+            text-decoration: none;
+            padding: 4px 8px;
+            border: 0;
+            outline: 0;
+            border-radius: 5px;
+            transition: 0.2s;
+
+            .active {
+                background-color: red;
+            }
+
+            svg {
+                width: 16px;
+                height: 16px;
+                margin-right: 6px;
+            }
+        
+            &:hover {
+                background-color: $c-3;
+            }
+
+            &:focus {
+                background-color: transparent;
+                border: 0;
+                outline: 0;
+                box-shadow: none;
+            }
+
+            &:active {
+                border: 0;
+                outline: 0;
+            }
+        }
+
+        .show > .btn {
+            background-color: transparent !important;
+
+            &:hover {
+                background-color: $c-2 !important;
+            }
+        
+            &-secondary.dropdown-toggle {
+                background-color: $c-3 !important;
+            }
+        }
+
+        .dropdown-menu {
+            min-width: 200px;
+            padding: 12px 12px 6px;
+            border: 0;
+            border-radius: 5px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+            button {
+                width: 100%;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                color: $c-2;
+                margin-bottom: 6px;
+
+               svg {
+                margin: 0;
+               }
+
+                &:hover {
+                    color: $c-1;
+                    background-color: $c-2;
+                }
+            }
+
+            li {
+                margin-bottom: 6px;
+
+                .dropdown-item {
+                    padding: 4px 8px;
+                    color: $c-2;
+
+                    &:hover {
+                        color: $c-1;
+                        background-color: $c-2;
+                    }
+                }
+                
+            }
+        }
+
+        .card {
+            background-color: transparent;
+            margin-left: 14px;
+            margin-bottom: 6px;
+            padding: 4px 0;
+            border: 0;
+            border-radius: 0;
+            border-left: 1px solid $c-3;
+
+            &-body {
+                padding: 0;
+                padding-left: 8px;
+
+                a {
+                    display: block;
+                    color: $c-2;
+                    font-weight: normal;
+                    padding: 3px 6px;
+                    margin: 3px 0;
+
+                    &:hover {
+                        color: $c-1;
+                        background-color: $c-2;
+                    }
+                }
+            }
+        }
+    }
+}

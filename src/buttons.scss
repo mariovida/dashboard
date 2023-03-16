@@ -1,0 +1,23 @@
+.btn {
+    background-color: $c-2 !important;
+    border-color: $c-2 !important;
+
+    svg {
+        width: 16px;
+        height: 16px;
+        margin-right: 8px;
+    }
+
+    &-outline-primary {
+        background-color: transparent !important;
+        color: $c-2 !important;
+
+        &:hover {
+            color: $c-1 !important;
+        }
+    }
+
+    &:hover {
+        background-color: #404e67 !important;
+    }
+}

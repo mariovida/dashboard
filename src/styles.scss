@@ -1,0 +1,75 @@
+@import './colors.scss';
+@import './fonts.scss';
+@import './buttons.scss';
+
+@import './css/header.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+}
+#app {
+    min-height: 100vh;
+    background-color: $c-1;
+    color: #404040;
+}
+.home {
+ 
+}
+.wrapper {
+    max-width: 1600px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* HEADERS */
+h1 {
+    margin-bottom: 0 !important;
+}
+
+.title-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+
+    &_btns {
+        justify-content: flex-end;
+        
+        a {
+            margin-left: 12px;
+        }
+    }
+}
+
+/* custom */
+.form-control:focus {
+    box-shadow: none;
+}
+.table {
+    font-size: 14px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 0px 5px 0px;
+
+    td span button {
+        display: inline-block;
+        font-size: 14px;
+        font-weight: 500;
+        margin-bottom: 0;
+        padding: 1px 6px;
+        border-radius: 5px;
+        cursor: default;
+    }
+}
+
+.badge-red {
+    color: #dc3545;
+    background-color: #ffe6e6;
+    border: 1px solid #dc3545;
+}
+.badge-green {
+    color: #28a745;
+    background-color: #e0ebe2;
+    border: 1px solid #28a745;
+} 

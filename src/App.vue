@@ -1,32 +1,26 @@
 <template>
   <div id="app">
     <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <div class="wrapper">
+        <router-link to="/">Home</router-link>
+        <router-link to="/about"><font-awesome-icon icon="fa-solid fa-info" />About</router-link>
+        <b-dropdown id="dropdown-1" text="More">
+          <button v-b-toggle.collapse-1>Toggle Collapse<font-awesome-icon icon="fa-solid fa-chevron-down" /></button>
+          <b-collapse id="collapse-1">
+            <b-card>
+              <a href="./"><font-awesome-icon icon="fa-solid fa-house" />Home</a>
+              <a href="./about"><font-awesome-icon icon="fa-solid fa-info" />About</a>
+            </b-card>
+          </b-collapse>
+          <b-dropdown-item href="./about">About</b-dropdown-item>
+        </b-dropdown>
+        <a href="/more">More</a>
+      </div>
     </nav>
     <router-view/>
   </div>
 </template>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
+  @import './styles.scss';
 </style>
